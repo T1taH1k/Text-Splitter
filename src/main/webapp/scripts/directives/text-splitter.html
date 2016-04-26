@@ -1,0 +1,30 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Text splitter</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>File input</label>
+                <input type="file" onchange="angular.element(this).scope().onFileChanged(this.files)" >
+            </div>
+            <div class="form-group">
+                <label>Text area</label>
+                <textarea class="form-control text-on-page" ng-model="text"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-6" id="pie-chart">
+            <div class="panel panel-default">
+                <div class="panel-heading">Pie Chart</div>
+                <div class="panel-body">
+                    <canvas id="pie" class="chart chart-pie chart-xs chart-on-page" data="pie.data" labels="pie.labels"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" ng-click="split()" class="btn btn-primary">Split text</button>
+
+</div>
